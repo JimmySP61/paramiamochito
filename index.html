@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Ti ❤️</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+<audio id="musica" loop>
+    <source src="canción.mp3" type="audio/mpeg">
+</audio>
+
+<h1>💌 Tengo algo para ti 💌</h1>
+
+<button onclick="mostrarContenido()">Abrir Carta</button>
+
+<div id="mensaje" class="carta">
+    <h3>Para Ti ❤️</h3>
+    <p>
+        Meno la verdad nunca se que más decir
+        cuando se trata de hablar de lo muchisimo que te 
+        amo, desde que llegaste a mi vida mis días 
+        son más felices
+        y siempres estas ahí cuando más te necesito, gracias
+        por ser la noviecita más perfecta de todo el mundo, 
+        te amo demasiado mi bebechita, eres la más hermosa, preciosa,
+        hemosha, bella chula y shabosha (ñam ñam ) jsjsjs, cada día 
+        me enamoro más de tu vocecita y me encanta ver tú carita en las fotos:3 jsjs
+       
+
+        
+    </p>
+    <p>
+        Siempre que pasamos el rato juntos el tiempo se va volando
+        siempre me dirvieto muchisimo contigo jsjs, y me haces infinitamente feliz
+        creeme cuando te digo que mi corachoncito es completamente tuyo porque tu haces
+        que me sienta la persona más afortunada de todo el mundo
+       
+    </p>
+
+    <p>
+         Te adoro con todo mi corazón y espero que me dejes amarte para toda la vida💗.
+    </p>
+</div>
+
+<div id="galeria" class="galeria">
+
+    <!-- 4 Imágenes -->
+    <img src="foto1.png" alt="">
+    <img src="foto2.png" alt="">
+    <img src="foto3.png" alt="">
+    <img src="foto4.png" alt="">
+
+    <!-- 3 Videos -->
+    <video controls>
+        <source src="video1.mp4" type="video/mp4">
+    </video>
+
+    <video controls>
+        <source src="video2.mp4" type="video/mp4">
+    </video>
+
+    <video controls>
+        <source src="video3.mp4" type="video/mp4">
+    </video>
+
+</div>
+
+<script>
+function mostrarContenido(){
+    const mensaje = document.getElementById("mensaje");
+    const galeria = document.getElementById("galeria");
+    const musica = document.getElementById("musica");
+
+    mensaje.classList.toggle("mostrar");
+    galeria.classList.toggle("mostrarGaleria");
+
+    if(mensaje.classList.contains("mostrar")){
+        musica.play();
+    } else {
+        musica.pause();
+        musica.currentTime = 0;
+    }
+}
+</script>
+
+
+</body>
+</html>
